@@ -18,7 +18,7 @@ Chart.defaults._set('radialGauge', {
   centerPercentage: 80,
 
   // The rotation for the start of the metric's arc
-  rotation: -Math.PI / 2,
+  rotation: -Math.PI / 1.5,
 
   // the color of the radial gauge's track
   trackColor: 'rgba(0, 0, 0, 0.1)',
