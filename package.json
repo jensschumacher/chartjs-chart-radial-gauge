@@ -1,8 +1,8 @@
 {
-  "name": "chartjs-chart-radial-gauge",
-  "description": "Chart.js radial gauge",
+  "name": "chartjs-radial-gauge-advanced",
+  "description": "Chart.js radial gauge by Patrice Pominville, customized by Jens Schumacher",
   "main": "build/Chart.RadialGauge.cjs.js",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "author": {
     "name": "Patrice Pominville",
     "email": "patrice.pominville@gmail.com"
@@ -10,7 +10,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/pandameister/chartjs-chart-radial-gauge.git"
+    "url": "https://github.com/jensschumacher/chartjs-radial-gauge-advanced.git"
   },
   "peerDependencies": {
     "chart.js": "^2.7.3"
