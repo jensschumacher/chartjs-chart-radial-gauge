@@ -21,7 +21,7 @@ Chart.defaults._set('radialGauge', {
   rotation: -Math.PI / 2,
 
   // the color of the radial gauge's track
-  trackColor: 'rgb(204, 221, 238)',
+  trackColor: 'rgba(0, 0, 0, 0.1)',
 
   // whether arc for the gauge should have rounded corners
   roundedCorners: true,
@@ -96,8 +96,8 @@ export default Chart => {
         _view: {
           backgroundColor: this.chart.options.trackColor,
           borderColor: this.chart.options.trackColor,
-          startAngle: 0,
-          endAngle: Math.PI * 2,
+          startAngle: -220,
+          endAngle: Math.PI * 1.5,
           x: this.centerX,
           y: this.centerY,
           innerRadius: this.innerRadius,
@@ -290,7 +290,7 @@ export default Chart => {
       const value = this.getMetricValue();
       const domainSize = domainEnd - domainStart;
 
-      return domainSize > 0 ? Math.PI * 2.0 * (Math.abs(value - domainStart) / domainSize) : 0;
+      return domainSize > 0 ? Math.PI * 1.5 * (Math.abs(value - domainStart) / domainSize) : 0;
     },
 
     // gets the max border or hover width to properly scale pie charts
