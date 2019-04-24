@@ -154,7 +154,7 @@ export default Chart => {
     drawCenterImage({ radius, options, ctx }) {
       const imageRadius = radius - options.padding;
       ctx.beginPath();
-      ctx.arc(0, 0, imageRadius, 0, Math.PI * 2, true);
+      ctx.arc(0, 0, imageRadius, 0, Math.PI * 1.5, true);
       ctx.closePath();
       ctx.clip();
       ctx.drawImage(
