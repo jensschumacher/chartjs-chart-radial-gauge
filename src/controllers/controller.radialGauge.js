@@ -18,7 +18,7 @@ Chart.defaults._set('radialGauge', {
   centerPercentage: 80,
 
   // The rotation for the start of the metric's arc
-  rotation: Math.PI / 1.5,
+  rotation: Math.PI / 1,
 
   // the color of the radial gauge's track
   trackColor: 'rgba(0, 0, 0, 0.1)',
@@ -96,8 +96,8 @@ export default Chart => {
         _view: {
           backgroundColor: this.chart.options.trackColor,
           borderColor: this.chart.options.trackColor,
-          startAngle: -3.84,
-          endAngle: Math.PI * 1.5,
+          startAngle: 3.84,
+          endAngle: Math.PI * 1,
           x: this.centerX,
           y: this.centerY,
           innerRadius: this.innerRadius,
@@ -145,7 +145,7 @@ export default Chart => {
     drawCenterBackground({ options, radius, ctx }) {
       const bgRadius = radius - options.padding;
       ctx.beginPath();
-      ctx.arc(0, 0, bgRadius, 0, Math.PI * 2);
+      ctx.arc(0, 0, bgRadius, 0, Math.PI * 1);
       ctx.closePath();
       ctx.fillStyle = options.backgroundColor;
       ctx.fill();
@@ -154,7 +154,7 @@ export default Chart => {
     drawCenterImage({ radius, options, ctx }) {
       const imageRadius = radius - options.padding;
       ctx.beginPath();
-      ctx.arc(0, 0, imageRadius, 0, Math.PI * 1.5, true);
+      ctx.arc(0, 0, imageRadius, 0, Math.PI * 1, true);
       ctx.closePath();
       ctx.clip();
       ctx.drawImage(
@@ -290,7 +290,7 @@ export default Chart => {
       const value = this.getMetricValue();
       const domainSize = domainEnd - domainStart;
 
-      return domainSize > 0 ? Math.PI * 1.5 * (Math.abs(value - domainStart) / domainSize) : 0;
+      return domainSize > 0 ? Math.PI * 1 * (Math.abs(value - domainStart) / domainSize) : 0;
     },
 
     // gets the max border or hover width to properly scale pie charts
